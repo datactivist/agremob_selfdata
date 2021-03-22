@@ -1,6 +1,6 @@
 ---
-title: "Agremob - Self data"
-subtitle: "présentation générale"
+title: "Agremob - Cozy"
+subtitle: "votre cloud personnel"
 author: "Sylvain Lapoix (Datactivist) &<br>Romain Le Gall (Numéricité)"
 date: "Permanence #1"
 output:
@@ -18,8 +18,8 @@ output:
           </div>
         </div>
 params:
-  event: permanence 1 - orga Agremob
-  slug: betatesteurs/doc/orga_agremob
+  event: permanence 1 - intro CozyCloud
+  slug: agremob_selfdata/betatesteurs/doc/intro_cozy
   description: Découvrez ma grosse conférence !
   title: Mon joli titre de présentation
   image: https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png
@@ -116,102 +116,46 @@ Les productions de Datactivist sont librement réutilisables selon les termes de
 background-image: url("https://media.giphy.com/media/GYJJQIUUuyEmY/giphy.gif")
 class: center, top, inverse
 
-# Présentation
+# Votre nouvel espace
 
 ---
 
-## Qu'est-ce que c'est que ce programme ?
-
----
-
-## Qui êtes-vous ?
-
-.pull-left[![médaillon Sylvain]()
-### Sylvain Lapoix (Datactivist)]
-
-.pull-right[![médaillon Romain]()
-### Romain Le Gall (Numéricité)]
-
-
----
-
-## Qui sommes-nous ?
 
 ---
 
 background-image: url("https://media.giphy.com/media/GYJJQIUUuyEmY/giphy.gif")
 class: center, top, inverse
 
-# Organisation générale
+# Fonctionnalités du Cozy
+
 
 ---
-
-## Planning des prochains mois
-
----
-
-## Actions !
-
-* utilisation des outils ;
-* formations ;
-* enquêtes.
-
----
-
-## Réactions !
-
-* suivi ;
-* évolution ;
-* développement.
-
----
-
 
 background-image: url("https://media.giphy.com/media/GYJJQIUUuyEmY/giphy.gif")
 class: center, top, inverse
 
+# Dans le cadre du programme
 
-### Et nous restons à votre dispo pour toute question !
-
----
-
-## Points de contact
-
-* permanences => relance sondage ;
-* "numéro vert" ;
-* mini-webinaires.
 
 ---
-
 
 background-image: url("https://media.giphy.com/media/GYJJQIUUuyEmY/giphy.gif")
 class: center, top, inverse
 
-# Outils
+# Les questions qui se posent
 
 ---
 
-## Centraliser vos données avec Cozy
-
---
-
-.center[Mais nous allons détailler ça après.
-![](https://media.giphy.com/media/tXL4FHPSnVJ0A/giphy.gif)]
-
----
-
-## Outils2
+## "Qui gère mes données ?"
 
 
 ---
 
-## Outils3
+## "Mes données sont-elles en sécurité ?"
 
+OVH
 
 ---
-
-## Outils4
-
 
 ---
 class: inverse, center, middle
