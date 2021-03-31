@@ -1,0 +1,375 @@
+---
+title: "Le self data territorial<br>de La Rochelle"
+subtitle: "présentation générale"
+author: "Sylvain Lapoix (Datactivist) &<br>Romain Le Gall (Numéricité)"
+output:
+  SlidesDatactivist::moon_reader:
+    css: [default, datactivist, datactivist-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: ["macros.js", "matomo.js", "https://platform.twitter.com/widgets.js"]
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+params:
+  event: orga self data territorial LR
+  slug: agremob_selfdata/betatesteurs/doc/orga_selfdataterritorial
+  image: https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png
+  image_alt: le logo de Datactivist
+---
+
+```{r, echo=FALSE}
+library(metathis)
+meta() %>% 
+  meta_description(params$event) %>% 
+  meta_name("github-repo" = paste0("datactivist/", params$slug)) %>% 
+  meta_viewport() %>% 
+  meta_social(
+    title = params$title,
+    url = paste0("https://datactivist.coop/", params$slug),
+    image = params$image,
+    image_alt = params$image_alt,
+    og_type = "website",
+    og_author = "Datactivist",
+    og_locale = "fr_FR",
+    og_site_name = "Datactivist",
+    twitter_card_type = "summary",
+    twitter_creator = "@datactivi_st")
+```
+
+layout: true
+
+<style>
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #e95459;
+}
+
+
+.pull-left-wide {
+  width: 65%;
+  float: left;
+}
+
+.pull-right-wide {
+  width: 65%;
+  float: right;
+}
+
+.pull-right-narrow {
+  width: 30%;
+  float: right;
+}
+
+.pull-left-narrow {
+  width: 30%;
+  float: left;
+}
+
+.quote {
+  font-family: 'Rokkitt';
+  font-weight: bold;
+  font-style: italic;
+  font-size: 28px;
+}
+
+
+.yellow-h{
+   background: #ffff88;
+}
+
+.blue-h{
+   background: #83c7fc;
+}
+
+
+</style>
+
+
+`r paste0("<div class='my-footer'><span>", params$event, "</span> <center><div class=logo><a href='https://datactivist.coop/'><img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'></a></div></center></span></div>")` 
+
+
+---
+
+class: center, middle
+
+Ces slides en ligne : `r paste0("http://datactivist.coop/", params$slug)`
+
+Sources : `r paste0("https://github.com/datactivist/", params$slug)`
+
+
+Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+<BR>
+<BR>
+
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
+
+---
+
+background-image: url("https://media.giphy.com/media/Y0mC3y5G53PsQ/giphy.gif")
+class: center, top, inverse
+
+# Présentation
+
+---
+
+## Qu'est-ce que le self data ?
+
+--
+
+> .quote["la production, l’exploitation et le partage de données personnelles par les individu·e·s, sous leur contrôle et à leurs propres fins"]
+
+.right[
+.caption[Source : [Kit Self Data Territorial](http://mesinfos.fing.org/implementer-le-self-data-sur-son-territoire-suivez-le-guide/), MesInfos / Fing]
+]
+
+--
+
+<br><br>
+Il s'agit de replacer des .yellow-h[opérations sur les données personnelles] (production, exploitation et partage) sous .blue-h[un régime de gouvernance centré sur les individus qu'elles concernent].
+
+Le self data croise ainsi des considérations .yellow-h[techniques] et .blue-h[politiques.].
+
+
+---
+
+
+## Et le self data .red[territorial] ?
+
+.center[
+![](./img/selfdataterritorial.jpg)
+]
+
+Initié par MesInfos, le projet Self data territorial organise depuis 2018 la mise en place de dispositifs d'expérimentation sur trois territoires pilotes :
+
+* **la métropole du Grand Lyon** ;
+* **Nantes Métropole** ;
+* **la ville de La Rochelle** (depuis repris par la Communauté d'Agglomération).
+
+
+---
+
+## Qu'est-ce que c'est que ce programme ?
+
+.center[
+![](./img/sdtlr_organisation.png)
+]
+
+---
+
+## A quoi cela va-t-il servir ?
+
+.center[
+![](https://media.giphy.com/media/ToMjGpNuOksUiclTp4c/giphy.gif)
+]
+
+--
+
+1. sensibiliser aux questions de mobilité ;
+2. tester des outils ;
+3. tester un dispositif d'accompagnement au changement de comportement ;
+4. collecter des données scientifiques sur l'expérimentation.
+
+---
+
+## Qui sommes-nous ?
+
+.pull-left[
+.center[#### Sylvain Lapoix (Datactivist)
+
+![médaillon Sylvain](./img/medaillon_sylvain_lapoix.png)
+
+*responsable recrutement et animation de la communauté de bêta-testeurs*
+
+]
+
+***
+
+* consultant, analyste, et formateur chez **.red[[Datactivist](https://datactivist.coop/fr/)]** ;
+* datajournaliste et coauteur pour le programme [#DATAGUEULE](https://www.youtube.com/user/datagueule) de France télévisions ;
+* basé à La Rochelle (La Pallice) ;
+* je suis cycliste, végétarien et amateur de funk.
+
+
+]
+
+.pull-right[
+.center[#### Romain Le Gall (Numéricité)
+
+![médaillon Romain](./img/medaillon_romain_legall.png)
+
+*chef de projet - responsable coordination des chantiers*
+]
+
+***
+
+* consultant pour **.red[[Numéricité]()]**
+* basé à Lyon ;
+* grimpeur du week-end.
+
+]
+
+
+---
+
+## Quel est votre rôle ?
+
+.center[
+![](./img/etre_betatesteur.png)
+]
+
+--
+
+En résumé :
+* utiliser les outils ;
+* répondre à des questionnaires ;
+* participer aux activités si vous le souhaitez.
+
+---
+
+## A quoi sert ce rendez-vous ?
+
+--
+
+.center[
+![](https://media.giphy.com/media/mBjnbBkZbOp1t7nkQo/giphy.gif)
+### A vous rendre l'expérience la plus confortable et profitable possible !
+]
+
+---
+
+background-image: url("https://media.giphy.com/media/3otPoOi7E60TCnAdmE/giphy.gif")
+class: center, top, inverse
+
+# Organisation générale
+
+---
+
+## Actions !
+
+
+* ### des outils ;
+* ### des formations ;
+* ### des enquêtes.
+
+---
+
+## Réactions !
+
+
+* ### du suivi ;
+* ### des corrections ;
+* ### des développements.
+
+
+---
+
+
+background-image: url("https://media.giphy.com/media/DUtVdGeIU8lmo/giphy.gif")
+class: center, top, inverse
+
+
+### Et nous restons à votre dispo pour toute question !
+
+---
+
+
+background-image: url("https://media.giphy.com/media/jOyc4EahGNPb3FoNuk/giphy.gif")
+class: center, top, inverse
+
+## Les points de contact
+
+
+---
+
+### Les permanences
+
+.red[Deux fois par mois] sur **Gather town**.
+
+.center[
+![](./img/sdtlr_permanences.png)
+]
+
+Pour échanger, se former, découvrir les partenaires, faire communauté ...
+
+---
+
+
+### ... en attendant des permanences in situ ?
+
+--
+
+.center[
+![](https://media.giphy.com/media/JO3njPVjzXhISgVHHy/giphy.gif)
+
+#### (avec respect des règles sanitaires)
+]
+
+---
+
+### La newsletter
+
+.red[Deux fois par mois] dans **la boîte mail dont vous nous avez donné l'adresse** (ou dans vos spams, parfois !)
+
+.pull-left-wide[
+![la newsletter](./img/sdtlr_newsletter_mock.png)
+]
+
+.pull-right-narrow[Pour partager avec vous les actualités du projet, notre veille sur les sujets du programme (mobilités, données personnelles, changement de comportement ...), les événements organisés par nos partenaires (et vous relancer pour répondre questionnaires).]
+
+---
+
+class: center, top
+
+### Notre "numéro vert" !
+
+![](https://media.giphy.com/media/Vb4ifejsKiL2U/giphy.gif)
+
+#### La boîte mail de [l'équipe du self data territorial de la Communauté d'Agglomération de La Rochelle](mailto:sylvain@datactivist.coop)* est là pour vous !
+
+--
+
+.footnote[\* Vous pouvez nous appeler<br>.red[Sylvain] et .red[Romain.]]
+
+---
+
+## Les outils
+
+.center[
+![](./img/les_outils.png)
+]
+
+---
+
+### Centraliser vos données avec Cozy
+
+--
+
+.center[Mais nous allons détailler ça après.
+![](https://media.giphy.com/media/tXL4FHPSnVJ0A/giphy.gif)]
+
+---
+class: inverse, center, middle
+
+# Merci ! Des questions ?
+
+Contact : [Sylvain](mailto:sylvain@datactivist.coop) et [Romain](r.legall@numericite.eu)

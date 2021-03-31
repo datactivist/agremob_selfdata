@@ -1,8 +1,7 @@
 ---
-title: "Agremob - Cozy"
-subtitle: "votre cloud personnel"
+title: "Cozy cloud"
+subtitle: "l'outil de cloud personnel<br>du self data territorial LR"
 author: "Sylvain Lapoix (Datactivist) &<br>Romain Le Gall (Numéricité)"
-date: "Permanence #1"
 output:
   SlidesDatactivist::moon_reader:
     css: [default, datactivist, datactivist-fonts]
@@ -18,10 +17,8 @@ output:
           </div>
         </div>
 params:
-  event: permanence 1 - intro CozyCloud
+  event: intro CozyCloud
   slug: agremob_selfdata/betatesteurs/doc/intro_cozy
-  description: Découvrez ma grosse conférence !
-  title: Mon joli titre de présentation
   image: https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png
   image_alt: le logo de Datactivist
 ---
@@ -43,7 +40,6 @@ meta() %>%
     og_site_name = "Datactivist",
     twitter_card_type = "summary",
     twitter_creator = "@datactivi_st")
-
 ```
 
 layout: true
@@ -118,8 +114,6 @@ class: center, top, inverse
 
 # Votre nouvel espace
 
----
-
 
 ---
 
@@ -163,5 +157,3 @@ class: inverse, center, middle
 # Merci ! Des questions ?
 
 Contact : [Sylvain](mailto:sylvain@datactivist.coop) et [Romain](r.legall@numericite.eu)
-
-
