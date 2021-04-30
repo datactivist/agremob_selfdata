@@ -368,6 +368,74 @@ class: center, top
 ![](https://media.giphy.com/media/tXL4FHPSnVJ0A/giphy.gif)]
 
 ---
+
+
+background-image: url("https://media.giphy.com/media/3oEjHRqYidxvH7GaVa/giphy.gif")
+class: center, top, inverse
+
+## Vos droits
+
+
+---
+
+### Traitement (1/2)
+
+Le responsable de traitement des données des utilisateurs est la Fabrique des Mobilités. Les conditions générales d’utilisation (CGU) présentes à ce lien sont les CGU complètes de l’application mobile TraceMob.
+
+Les données traitées sont les suivantes : 
+
+.pull-left[
+#### Finalité 1 : identification de l’utilisateur pour retrouver ses données dans la base de données :
+* Token utilisateur unique ;
+* Horodatage de création de l’utilisateur ;
+* Système d’exploitation associé ;
+* Identifiant unique de l’appareil.
+]
+
+.pull-right[
+#### Finalité 2 : visualisation des traces de mobilités par l’utilisateur ou le bêta-testeur avec une estimation de son empreinte carbone.
+* Positions géographiques détectées par le système d’exploitation du téléphone.]
+
+
+---
+
+### Traitement (2/2)
+
+#### Finalité 3 : nettoyage et correction des traces de mobilités pour que l’utilisateur puisse les visualiser.
+* Positions géographiques détectées par le système d’exploitation du téléphone
+* Vitesses détectées par le système d’exploitation du téléphone 
+* Modes de transports détectés par le système d’exploitation du téléphone
+* Les données susmentionnées sont obligatoirement collectées pour pouvoir bénéficier des services proposées par l’application, à savoir la visualisation de ses traces de mobilités et l’estimation de l’empreinte carbone liée à ses déplacements. Aucun traitement de donnée ne donne lieu à une prise de décision individuelle automatisée, ni à un profilage.
+
+
+Si l’utilisateur ne souhaite pas que ces données soient communiquées au serveur, il est alors dans l’impossibilité d’utiliser l’application TraceMob.
+
+---
+
+### Stockage
+
+Les données brutes sont stockées sur le smartphone de l’utilisateur et envoyées au fil de l’eau à un serveur effectuant chaque nuit un traitement pour améliorer les données. Le traitement consiste en 8 étapes qui sont détaillées dans les CGU complètes (paragraphe 6.b.). Conformément à la réglementation en vigueur, les données sont traitées dans un serveur hébergé en France par la société OVH. 
+
+---
+
+### Droits sur les données :
+* **Droit d’information** : l’Utilisateur peut demander à tout moment à TraceMob quelles sont les données traitées à son sujet.
+* **Droit de rectification** : l’Utilisateur peut rectifier les données à son sujet si elles s’avèrent inexactes.
+* **Droit d’accès** : l’Utilisateur peut demander à TraceMob de lui envoyer l’ensemble des données traitées à son sujet. 
+* **Droit d’opposition** : l’Utilisateur peut s’opposer au traitement sous certaines conditions.
+* **Droit à la suppression** : l’Utilisateur peut demander la suppression de ses données à caractère personnels
+* **Droit de limitation** : l’Utilisateur peut demander au responsable de traitement de geler temporairement l’utilisation de certaines de ses données 
+* **Droit à la portabilité** : l’Utilisateur peut demander une copie de ses données à caractère personnel. 
+
+La possibilité de quitter l’expérimentation en envoyant un e-mail à l'adresse suivante : larochelle@selfdata.org
+
+Le contact de l’expérimentation Self Data Territorial : larochelle@selfdata.org 
+
+---
+
+
+
+---
 class: inverse, center, middle
 
 # Merci ! Des questions ?
