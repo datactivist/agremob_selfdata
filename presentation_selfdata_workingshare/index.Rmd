@@ -111,24 +111,24 @@ class: inverse
 2. des signalements des automobilistes ;
 3. des informations sur les comptes individuels.
 
-.center[
 ![](./img/waze.png)
+
 ]
-]
+
 
 .pull-right[Les données personnelles sont donc collectées et traitées pour élaborer des itinéraires.
 
-Votre consentement est recueilli par l'acceptation des **Conditions générales d'utilisation** (ou CGU). .orange[mais il porte sur l'intégralité des opérations] :
+Votre consentement est recueilli par l'acceptation des **Conditions générales d'utilisation** (ou CGU) :
 
 * collecte ;
 * traitement ;
 * utilisation.
 
-Waze vous propose sa version de l'itinéraire, selon ses critères (principalement durée du trajet et péages)]]
+Waze vous profile:///home/sy/Datactivist/cda_larochelle/agremob_selfdata/presentation_selfdata_workingshare/index.html#4pose sa version de l'itinéraire, selon ses critères (principalement durée du trajet et péages)]
 
 ---
 
-### 3. Le chemin caché de vos données de mobilité
+### 3. Le chemin caché des données de mobilité
 
 .pull-left[
 La chercheuse Jill Walker Rettberg a étudié l'application Strava pour introduire le concept de *données situées*. 
@@ -137,9 +137,9 @@ La chercheuse Jill Walker Rettberg a étudié l'application Strava pour introdui
 ]
 
 .pull-right[
-En pratique, Strava collecte principalement les données GPS des usager·ères qui qualifie leur trajet (course, vélo, marche, natation ...).
+En pratique, Strava collecte principalement les données GPS des usager·ères.
 
-Elle identifie quatre façons dont l'entreprise Strava distribue ces données :
+Elle identifie quatre façons dont l'entreprise Strava les distribue :
 1. on voit ses propres données dans l'app ;
 2. on voit les données globales en datavisualisations ;
 3. les urbanistes peuvent acheter un accès à des dashboards avec Strava Metro ;
@@ -235,11 +235,11 @@ Le self data territorial de .lr_bg[la Communuauté d'Agglomération de La Rochel
 .pull-left-wide[
 L'application .red[**TraceMob**] est le premier outil du self data territorial : **un capteur personnel de traces de mobilité conçu pour le self data**.
 
-Adapté par La fabrique des mobilités à partir de l'application [e-Mission](https://e-mission.eecs.berkeley.edu/#/home) développée par l'Université de Berkeley, l'app capte **les points GPS** en arrière-plan dès qu'un mouvement est repéré.
+Adapté par La fabrique des mobilités à partir de l'application [e-mission](https://e-mission.eecs.berkeley.edu/#/home) développée par l'Université de Berkeley, l'app capte **les points GPS** en arrière-plan dès qu'un mouvement est repéré.
 
-Ces points sont ensuite transmis pour traitement par des modèles pour reconstituer des **trajets**, desquels sont prédits des **modes** de déplacement et calculé une **empreinte CO2**.
+Ces points sont ensuite transmis pour traitement par des modèles pour reconstituer des **trajets**, desquels sont prédits des **modes** de déplacement et calculée une **empreinte CO2**.
 
-Les données ne sont **ni stockés, ni consultables** et les flux ne sont **pas réidentifiables** à leur propriétaire.
+Les données ne sont **ni stockées, ni consultables** et les flux ne sont **pas réidentifiables** à leur propriétaire.
 
 ]
 
@@ -249,10 +249,10 @@ Les données ne sont **ni stockés, ni consultables** et les flux ne sont **pas 
 
 ---
 
-### 10. eMission
+### 10. e-mission
 
 .pull-left[
-TraceMob s'inspire d'une application développée par l'Université de Berkeley : [eMission](https://e-mission.eecs.berkeley.edu).
+TraceMob s'inspire d'une application développée par l'Université de Berkeley : [e-mission](https://e-mission.eecs.berkeley.edu).
 
 Intégralement open source (son code est dispo sur Github), cette application vise à constituer un *"journal de trajet personnel"* en permettant la récolte des trajets et des données associées :
 
@@ -268,7 +268,7 @@ Intégralement open source (son code est dispo sur Github), cette application vi
 
 ---
 
-#### 10 bis. : eMission en action 1/4
+#### 10 bis. : e-mission en action 1/4
 
 .center[
 ![](https://media.giphy.com/media/LYXJQHXO65oe4/giphy.gif)
@@ -283,7 +283,7 @@ Elle fonctionne **en arrière-plan**, c'est-à-dire sans avoir besoin d'être ac
 
 ---
 
-#### 10. ter : eMission en action 2/4
+#### 10. ter : e-mission en action 2/4
 
 Dès qu'un mouvement est capté par .red[l'accéléromètre], eMission débute la collecte des données issues du .red[GPS].
 
@@ -293,7 +293,7 @@ Dès qu'un mouvement est capté par .red[l'accéléromètre], eMission débute l
 
 ---
 
-#### 10. quater : eMission en action 3/4
+#### 10. quater : e-mission en action 3/4
 
 Quand .red[l'accéléromètre] note un arrêt prolongé du mouvement, TraceMob cesse la collecte de données du capteur .red[GPS].
 
@@ -303,7 +303,7 @@ Quand .red[l'accéléromètre] note un arrêt prolongé du mouvement, TraceMob c
 
 ---
 
-#### 10. quinter : eMission en action 4/4
+#### 10. quinter : e-mission en action 4/4
 
 La trace collectée va être analysée et confrontée à des algorithmes permettant de *"prédire"* le mode de déplacement utilisé en fonction de la physionomie de la trace :
 
@@ -317,7 +317,7 @@ La trace collectée va être analysée et confrontée à des algorithmes permett
 ---
 
 
-### 10. final : TraceMob, une évolution d'eMission
+### 10. final : TraceMob, une évolution d'e-mission
 
 .center[
 ![](./img/emission_pokemon_evolution2.png)
@@ -374,7 +374,7 @@ Ces fonctionnalités sont sélectionnées et évaluées avec l'aide d'un panel d
 ---
 
 .center[
-### 14. Volet scientifque
+### 14. Volet scientifique
 ]
 
 .pull-left-wide[
@@ -389,7 +389,7 @@ Ces données seront traitées et analysées dans le cadre de publications scient
 
 .pull-right-narrow[**Objectifs**
 
-* étudier la capacité des outils numérique à changer des comportements ;
+* étudier la capacité des outils numériques à changer des comportements ;
 
 **Champs d'étude**
 
