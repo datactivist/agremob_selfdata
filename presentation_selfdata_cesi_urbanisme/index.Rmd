@@ -99,7 +99,7 @@ class: inverse
 
 background-image: url("https://media.giphy.com/media/j1RdWetLBJQIdP8TnK/giphy.gif")
 background-size: contains
-class: inverse
+class: inverse, center
 
 
 ### Qui parmi vous utilise Waze ?
@@ -156,7 +156,7 @@ background-size: contains
 class: inverse
 
 
-### Pourquoi Waze et Strava peuvent se permettre ça ?
+### Pourquoi Waze et Strava<br>peuvent se permettre ça ?
 
 ---
 
@@ -632,10 +632,12 @@ class: inverse
 
 class: center, middle
 
-.reduite[
+### Au moment de vous inscrire, n'oubliez pas de sélectioner "CESI"
+
+
+
 ![](./img/selfdatalr_qrcode.png)
+
+.right[
+#### *Contact : [Sylvain Lapoix](mailto:sylvain@datactivist.coop)*
 ]
-
-# Des questions ?
-
-Contact : [Sylvain Lapoix](mailto:sylvain@datactivist.coop).
