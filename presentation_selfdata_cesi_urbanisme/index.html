@@ -94,7 +94,7 @@ background-size: contains
 class: inverse
 
 
-# I. Le chemin cachée de vos données de mobilités
+# I. Le chemin caché de vos données de mobilité
 
 ---
 
@@ -148,7 +148,7 @@ Elle identifie quatre façons dont l'entreprise Strava les distribue :
 2. on voit les données globales en datavisualisations ;
 3. les urbanistes peuvent acheter un accès à des dashboards avec Strava Metro ;
 4. la donnée peut être traitée par une application de navigation pour calculer le meilleur chemin.
-]
+])
 
 ---
 
@@ -163,11 +163,14 @@ class: inverse
 
 
 background-image: url("./img/waze_cgu.png")
-background-size: cover
+background-size: contain
 
 ### .white-h[Parce que vous avez donné votre accord aux CGU*]
 
-.foonote[.white-h[\*Conditions générales d'utilisation.]
+.footnote[
+.white-h[\*Conditions générales d'utilisation.]
+]
+
 
 ---
 
@@ -301,7 +304,11 @@ class: inverse
 
 ## Des modèles pour calculer l'impact
 
+.center[
+![](./img/hbefa_emission.png)
+]
 
+.footnote[Extrait de la documentation du [référentiel HBEFA](https://www.hbefa.net/e/index.html), utilisé par l'application TraceMob, [voir code source](https://github.com/e-mission/e-mission-phone/blob/f12c54b17babb0da8f1bbdc380450ec9664124d0/www/js/metrics-mappings.js#L59).]
 
 ---
 
@@ -366,7 +373,7 @@ class: inverse
 
 ---
 
-#### e-mission en action 1/4
+#### e-mission se lance 1/4
 
 .center[
 ![](https://media.giphy.com/media/LYXJQHXO65oe4/giphy.gif)
@@ -406,7 +413,7 @@ Quand .red[l'accéléromètre] note un arrêt prolongé du mouvement, TraceMob c
 La trace collectée va être analysée et confrontée à des algorithmes permettant de *"prédire"* le mode de déplacement utilisé en fonction de la physionomie de la trace :
 
 * vitesse et arrêt ;
-* point de passage (par exemple : si le véhicule s'arrête à des points identifiés comme arrêt de bus sur OpenStreetMap, la trace sera identifié comme un déplacement en bus).
+* point de passage (par exemple : si le véhicule s'arrête à des points identifiés comme arrêt de bus sur OpenStreetMap, la trace sera identifiée comme un déplacement en bus).
 
 .center[
 ![](https://media.giphy.com/media/NuH9WJmVejlboN0uB7/giphy.gif)
@@ -428,7 +435,7 @@ background-size: contains
 class: inverse
 
 
-# .white-h[III. Le projet self data territorial de La Rochelle]
+# III. Le projet self data territorial de La Rochelle
 
 ---
 
@@ -536,9 +543,10 @@ Le Cozy assure ici une fonction d'**archivage sécurisé et personnel** permetta
 * exploration des traces via une interface de recherche avancée (avec filtres temporels, géographiques, par mode, etc.) ;
 * annotation / correction ;
 * historicisation des distances, émissions avec possibilité de regroupement ;
-* comparaison à un groupe cible, à N -1 an, etc.]
+* comparaison à un groupe cible, à N -1 an, etc.
 
 Ces fonctionnalités sont sélectionnées et évaluées avec l'aide d'un panel de participant·es volontaires.
+]
 
 ---
 
@@ -559,7 +567,7 @@ Les bêtatesteurs et bêtatesteuses s'engagent également à participer à une .
 
 Une équipe du Cnam assure la collecte de ces données auprès des participant·es via deux canaux :
 * questionnaires scientifiques ;
-* entretiens semi-directif.
+* entretiens semi-directifs.
 
 Ces données seront traitées et analysées dans le cadre de publications scientifiques. Elles font également l'objet de restitution auprès des participant·es et partenaires de l'expérimentation.
 ]
