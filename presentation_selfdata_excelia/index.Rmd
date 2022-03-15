@@ -1,0 +1,696 @@
+---
+title: "Self data territorial<br>La Rochelle"
+subtitle: "un outil pour relier carbone et mobilités par la donnée"
+author: "Sylvain Lapoix (Datactivist)<br>co-chef de projet self data La Rochelle"
+date: "16/02/2022"
+output:
+  SlidesDatactivist::moon_reader:
+    css:
+      - default
+      - datactivist
+      - datactivist-fonts
+      - https://raw.githubusercontent.com/SylvainLapoix/slides_datactivist/master/bonus_styles.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      highlightSpans: true
+      countIncrementalSlides: false
+params:
+  event: Self data LR - présentation CESI urbanisme
+
+---
+
+layout: true
+  
+
+`r paste0("<div class='my-footer'><span>", params$event, "</span> <center><div class=logo><img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'></center></span></div>")` 
+
+
+<style type="text/css">
+
+.lr_bg{
+  background: black;
+  color: #f7c600;
+  font-weight: bold;
+}
+
+.pull-left-wide {
+  width: 65%;
+  float: left;
+}
+
+.pull-right-wide {
+  width: 65%;
+  float: right;
+}
+
+.pull-right-narrow {
+  width: 30%;
+  float: right;
+}
+
+.pull-left-narrow {
+  width: 30%;
+  float: left;
+}
+
+.quote {
+  font-family: 'Rokkitt';
+  font-weight: bold;
+  font-style: italic;
+  font-size: 28px;
+}
+
+
+.yellow-h{
+  background: #ffff88;
+}
+
+.blue-h{
+  background: #83c7fc;
+}
+
+
+.white-h{
+   color: #000000;
+   background: #FFFFFF;
+}
+
+.black-h{
+   color: #FFFFFF;
+   background: #000000;
+}
+
+
+</style>
+
+
+---
+
+background-image: url("https://media.giphy.com/media/HVFJvupn4gYMjfCwPW/giphy.gif")
+background-size: contains
+class: inverse
+
+
+# I. Comment et pourquoi vos apps vous trackent ?
+
+---
+
+background-image: url("https://media.giphy.com/media/j1RdWetLBJQIdP8TnK/giphy.gif")
+background-size: contains
+class: inverse, center
+
+
+### Qui parmi vous utilise Waze ?
+
+
+---
+
+background-image: url("https://media.giphy.com/media/EaMTsoYxfPpuw/giphy.gif")
+background-size: contains
+class: inverse, center
+
+
+### Qui parmi vous utilise Strava ?
+
+
+---
+
+background-image: url("https://media.giphy.com/media/i44JJHlvLsbIjY7uJ4/giphy.gif")
+background-size: contains
+class: inverse, center
+
+
+### Qui parmi vous utilise Géovélo ?
+
+
+---
+
+background-image: url("https://media.giphy.com/media/wa8uMtV7bmdGTGGmD7/giphy.gif")
+background-size: cover
+class: inverse, center
+
+
+### Savez-vous quelles données elles récupèrent ?
+
+
+
+---
+
+background-image: url("https://media.giphy.com/media/1wANL9kM16LyszJjms/giphy.gif")
+background-size: contains
+class: inverse, center
+
+
+### En fait, elles marchent presque pareil ...
+
+
+---
+
+#### Capter les données GPS 1/2
+
+Dès qu'un mouvement est capté par .red[l'accéléromètre], l'app débute la collecte des données issues du .red[GPS] (elle se branche aussi sur d'autres capteurs pour être plus précise : WiFi, Bluetooth, 4G ou 5G).
+
+.center[
+![](https://media.giphy.com/media/WG17Ng2VWX4OGhJO6v/giphy.gif)
+]
+
+---
+
+#### Capter les données GPS 2/2
+
+
+Quand .red[l'accéléromètre] note un arrêt prolongé du mouvement, l'app cesse la collecte de données du capteur .red[GPS].
+
+.center[
+![](https://media.giphy.com/media/ezCLFd32cEXn2/giphy.gif)
+]
+
+---
+
+
+background-image: url("https://media.giphy.com/media/1wANL9kM16LyszJjms/giphy.gif")
+background-size: contains
+class: inverse, center
+
+### Mais alors, quelles sont les différences ?
+
+---
+
+### 1. La façon dont la donnée est restituée à l'usager
+
+Quels sont les *"priorités"* des apps ?
+
+.pull-left[
+.red[Waze] cherche **l'efficacité** ;
+.red[Strava] cherche **la performance** ;
+.red[Géovélo] cherche **l'efficacité** et **la sécurité**.
+]
+
+--
+
+.pull-right[
+> Et quelles dimensions ne sont pas envisagées ?
+
+]
+
+--
+
+Par exemple : le coût ou la dangerosité du trajet, la beauté des paysages, la fatigue du sportif ...
+
+---
+
+background-image: url("")
+background-size: contains
+class: inverse, center
+
+### 2. A qui d'autre que l'usager sont transmises les données
+
+
+---
+
+### A quoi servent vos données Waze ?
+
+
+.pull-left[L'appli Waze fonctionne selon un principe de *crowdsourcing* :
+
+1. de la géolocalisation des véhicules ;
+2. des signalements des automobilistes ;
+3. des informations sur les comptes individuels.
+
+![](./img/waze.png)
+
+]
+
+
+.pull-right[Les données personnelles sont donc collectées et traitées pour élaborer des itinéraires.
+
+Waze vous propose sa version de l'itinéraire, selon ses critères (principalement durée du trajet et péages) et se réserve le droit de réutiliser vos données selon ses propres termes (collecte, traitement, stockage et partage.]
+
+---
+
+### Des "données situées"
+
+.pull-left[
+La chercheuse Jill Walker Rettberg a étudié l'application Strava pour introduire le concept de *données situées*. 
+
+![](https://media.springernature.com/lw685/springer-static/image/art%3A10.1057%2Fs41599-020-0495-3/MediaObjects/41599_2020_495_Fig1_HTML.png)
+]
+
+.pull-right[
+En pratique, Strava collecte principalement les données GPS des usager·ères.
+
+Elle identifie quatre façons dont l'entreprise Strava les distribue :
+1. on voit ses propres données dans l'app ;
+2. on voit les données globales en datavisualisations ;
+3. les urbanistes peuvent acheter un accès à des dashboards avec Strava Metro ;
+4. la donnée peut être traitée par une application de navigation pour calculer le meilleur chemin.
+])
+
+---
+
+background-image: url("https://media.giphy.com/media/9ryK98PxAGLxifr9aD/giphy.gif")
+background-size: contains
+class: inverse
+
+
+### Pourquoi Waze et Strava<br>peuvent se permettre ça ?
+
+---
+
+
+background-image: url("./img/waze_cgu.png")
+background-size: contain
+
+### .white-h[Parce que vous avez donné votre accord aux CGU*]
+
+.footnote[
+.white-h[\*Conditions générales d'utilisation.]
+]
+
+
+---
+
+background-image: url("https://www.visualcapitalist.com/wp-content/uploads/2020/04/length-of-service-agreements-1.jpg")
+background-size: cover
+
+
+### .white-h[Et, vous les avez lues avant ?*]
+
+.footnote[
+Source image : [Visual Capitalist](https://www.visualcapitalist.com/terms-of-service-visualizing-the-length-of-internet-agreements/)]
+]
+
+
+---
+
+background-image: url("https://media.giphy.com/media/yMwWgfNqIO8Kc/giphy.gif")
+background-size: cover
+class: inverse, center
+
+## Bienvenue dans le monde merveilleux de la gouvernance des données
+
+---
+
+
+### Le RGPD : un début de cadre
+
+.center[
+.reduite[
+![](https://www.cnil.fr/sites/default/files/styles/contenu-generique-visuel/public/thumbnails/image/notion_cles_0.jpg?itok=CJyE3vkK)
+]
+]
+
+Adopté par le Parlement européen en 2016 et porté en droit français en 2018, le Règlement général sur la protection des données (ou RGPD) encadre la collecte, le traitement, l'utilisation et la conservation des données dans l'Union européenne.
+
+Source illustration : [Cnil](https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on).
+
+---
+
+
+background-image: url("https://media.giphy.com/media/qPkOReBnmmETgX5RMs/giphy.gif")
+background-size: cover
+
+### Le droit à la portabilité,<br>progrès concret
+
+---
+
+
+background-image: url("https://media.giphy.com/media/VXCPgZwEP7f1e/giphy-downsized-large.gif")
+background-size: contains
+class: inverse, center
+
+### .black-h[Et, vous allez l'utiliser ?]
+
+--
+
+### .black-h[Comme beaucoup de gens : non.]
+
+--
+
+.footnote[
+.black-h[... et on peut pas vous en vouloir.]
+]
+
+---
+
+background-image: url("https://media.giphy.com/media/umbIrcUJbmuIUZ1e7M/giphy.gif")
+background-size: cover
+class: inverse, center
+
+## D'autres modèles de gouvernance ?
+
+---
+
+## Le self data !
+
+> .quote["la production, l’exploitation et le partage de données personnelles par les individus, sous leur contrôle et à leurs propres fins"]
+
+Deux dimensions se croisent dans cette définition :
+
+.pull-left[#### *Les opérations*
+
+* la production ;
+* l'exploitation ;
+* le partage]
+
+.pull-right[#### *Leurs modalités*
+
+* sous le contrôle des individus ;
+* à leur propre fin.]
+
+Leur objet central, **les données personnelles**, justifie les modalités évoquées :<br>il s'agit de réinvestir les usager·ères dans les data produites à leur sujet.
+
+.right[
+.caption[Source : [Kit Self Data Territorial](http://mesinfos.fing.org/implementer-le-self-data-sur-son-territoire-suivez-le-guide/), MesInfos / Fing]
+]
+
+---
+
+class: inverse, center
+
+### OK mais quelles données récupérer ?
+
+--
+
+![](https://media.giphy.com/media/ji6zzUZwNIuLS/giphy.gif)
+
+
+### Et pour quoi faire ?
+
+---
+
+background-image: url("https://media.giphy.com/media/3oKIPllXEiSblIM1j2/giphy.gif")
+background-size: contains
+class: inverse
+
+
+# II. De la mobilité au CO2
+
+---
+
+## Impact CO2 des déplacements
+
+.center[
+![](https://carbone4.com/files/graphique_final.png)
+]
+
+.footnote[Source : [MyCO2, Carbone4](https://www.carbone4.com/myco2-empreinte-moyenne-evolution-methodo)]
+
+---
+
+## Des modèles pour calculer l'impact
+
+.center[
+![](./img/hbefa_emission.png)
+]
+
+.footnote[Extrait de la documentation du [référentiel HBEFA](https://www.hbefa.net/e/index.html), utilisé par l'application TraceMob, [voir code source](https://github.com/e-mission/e-mission-phone/blob/f12c54b17babb0da8f1bbdc380450ec9664124d0/www/js/metrics-mappings.js#L59).]
+
+---
+
+
+background-image: url("https://media.giphy.com/media/4JVTF9zR9BicshFAb7/giphy.gif")
+background-size: contains
+class: inverse
+
+
+### Avec le mode et le trajet, on peut donc calculer les émissions de CO2
+
+
+---
+
+.center[
+### TraceMob<br>*un capteur "self data by design"*
+]
+.pull-left-wide[
+L'application .red[**TraceMob**] est le premier outil du self data territorial : **un capteur personnel de traces de mobilité conçu pour le self data**.
+
+Adapté par La fabrique des mobilités à partir de l'application [e-mission](https://e-mission.eecs.berkeley.edu/#/home) développée par l'Université de Berkeley, l'app capte **les points GPS** en arrière-plan dès qu'un mouvement est repéré.
+
+Ces points sont ensuite transmis pour traitement par des modèles pour reconstituer des **trajets**, desquels sont prédits des **modes** de déplacement et calculée une **empreinte CO2**.
+
+Les données ne sont **ni stockées, ni consultables** et les flux ne sont **pas réidentifiables** à leur propriétaire.
+
+]
+
+.pull-right-narrow[
+![](./img/tracemob_journal.png)
+]
+
+---
+
+### e-mission
+
+.pull-left[
+TraceMob s'inspire d'une application développée par l'Université de Berkeley : [e-mission](https://e-mission.eecs.berkeley.edu).
+
+Intégralement open source (son code est dispo sur Github), cette application vise à constituer un *"journal de trajet personnel"* en permettant la récolte des trajets et des données associées :
+
+* horaires ;
+* durée ;
+* trajectoires ;
+* mode de transport.
+]
+
+.pull-right[
+![](./img/emission_interface.png)
+]
+
+---
+
+
+
+background-image: url("https://media.giphy.com/media/xT1R9XWlRXt08xfDX2/giphy.gif")
+background-size: contains
+class: inverse
+
+
+### Comment ça marche ?
+
+---
+
+---
+
+### TraceMob, une évolution d'e-mission
+
+.center[
+![](./img/emission_pokemon_evolution2.png)
+]
+
+---
+
+
+background-image: url("https://www.larochelle-zerocarbone.fr/documents/12909285/12960371/self+data+sch%C3%A9ma/2d61b6a0-7314-4b86-bcb8-a9f6374171cc?t=1622111671000")
+background-size: contains
+class: inverse
+
+
+# III. Le projet self data territorial de La Rochelle
+
+---
+
+
+### Les différents "self data"
+
+.center[
+![](./img/self_data_gouvernance.png)
+]
+
+---
+
+## Le self data territorial
+
+.center[
+![](./img/selfdataterritorial.jpg)
+]
+
+Initié par MesInfos, le projet Self data territorial organise depuis 2018 la mise en place de dispotifis d'expérimentation sur trois territoires pilotes :
+
+* **la métropole du Grand Lyon** ;
+* **Nantes Métropole** ;
+* **la Communauté d'Agglomération de La Rochelle**.
+
+---
+
+## La démarche de La Rochelle : mobilité, données, privacy
+
+Le self data territorial de .lr_bg[la Communuauté d'Agglomération de La Rochelle] s'inscrit dans la continuité de deux grands projets territoriaux :
+
+* La Rochelle Territoire Zéro Carbone ;
+* Agremob.
+
+.pull-left[
+.center[
+**Objectif**
+
+*expérimenter avec un groupe de 500 bêtatesteurs et bêtatesteuses des outils de réappropriation des données et collecter des données scientifiques afin d'étudier les changements de comportement permis par l'information sur l'impact carbone des mobilités.*]
+]
+
+.pull-left[
+.center[
+**Partenaires**
+
+* .red[**recruteurs**] : CdA La Rochelle, ville de La Rochelle, Université de La Rochelle, Excelia, Eigsi, J'adopte un projet ;
+* .red[**scientifiques**] : Cnam, Excelia, Université de La Rochelle ;
+* .red[**techniques**] : La Fabrique des mobilités, Cozy.
+]
+]
+
+---
+
+
+
+background-image: url("https://media.giphy.com/media/GvSU8xa3RNDVFjWOZz/giphy.gif")
+background-size: contains
+class: inverse
+
+
+
+### Avec de nouveaux outils !
+
+---
+
+.center[
+### Cozy - *le cloud personnel*
+]
+
+.pull-left-wide[
+La société **Cozy cloud** met à disposition des participant·es un .red[**cloud personnel optimisé pour le self data territorial**].
+
+![](./img/cozy_home.png)
+
+
+]
+
+.pull-right-narrow[
+La société Cozy Cloud a développé à destination des bêtatesteurs et bêtatesteuses un **connecteur** dédié à TraceMob. Cette extension permet de récupérer les documents produits par l'app en format brut.
+
+Le Cozy assure ici une fonction d'**archivage sécurisé et personnel** permettant de connecter les apps suivant le choix de son propriétaire.
+]
+
+
+---
+
+### Vers CoachCO2 ...
+
+.center[
+![](./img/emission_pokemon_evolution3.png)
+]
+
+
+---
+
+.center[
+### CoachCO2<br>*l'outil d'aide au changement*
+]
+
+.pull-left-narrow[
+![](./img/coachco2_preview.png)
+]
+
+.pull-right-wide[.red[**CoachCO2**] offre plusieurs fonctionnalités sur la base des traces récoltées par les bêtatesteurs et bêtatesteuses ;
+
+* exploration des traces via une interface de recherche avancée (avec filtres temporels, géographiques, par mode, etc.) ;
+* annotation / correction ;
+* historicisation des distances, émissions avec possibilité de regroupement ;
+* comparaison à un groupe cible, à N -1 an, etc.
+
+Ces fonctionnalités sont sélectionnées et évaluées avec l'aide d'un panel de participant·es volontaires.
+]
+
+---
+
+### Des outils interconnectés pour un circuit de la donnée sécurisé
+
+.center[
+![](./img/selfdatalr_outils.png)
+]
+
+---
+
+.center[
+### Un projet scientifique !
+]
+
+.pull-left-wide[
+Les bêtatesteurs et bêtatesteuses s'engagent également à participer à une .red[**collecte de données socio-métrologiques**] visant à mieux comprendre les mécanismes de changement de comportement.
+
+Une équipe du Cnam assure la collecte de ces données auprès des participant·es via deux canaux :
+* questionnaires scientifiques ;
+* entretiens semi-directifs.
+
+Ces données seront traitées et analysées dans le cadre de publications scientifiques. Elles font également l'objet de restitution auprès des participant·es et partenaires de l'expérimentation.
+]
+
+.pull-right-narrow[**Objectifs**
+
+* étudier la capacité des outils numériques à changer des comportements ;
+
+**Champs d'étude**
+
+* sociologie ;
+* socio-métrologie ;
+* sciences de l'information.
+]
+
+---
+
+
+background-image: url("https://media.giphy.com/media/3omJYYjXQN3C6eUTfh/giphy.gif")
+background-size: cover
+class: inverse
+
+
+### Un projet auquel VOUS pouvez participer !
+
+---
+
+background-image: url("https://media.giphy.com/media/M960XBOtpI9nozI13V/giphy.gif")
+background-size: cover
+class: inverse
+
+
+## En résumé, ce qu'on vous propose
+
+.footnote[]
+
+---
+
+background-image: url("https://media.giphy.com/media/baPIkfAo0Iv5K/giphy.gif")
+background-size: cover
+class: inverse
+
+## Et ce qu'on vous demande
+
+.footnote[
+.white-h[* télécharger et utiliser les apps ;
+* répondre à 3 questionnaires sur l'année ;
+* ... et puis c'est tout en fait !]
+]
+
+---
+
+
+## Comment s'inscrire ?
+
+.white-h[Il vous suffit de remplir [un formulaire d'engagement](https://framaforms.org/experimentation-self-data-territorial-et-mobilites-durables-inscription-1613560399)]
+
+.center[
+![](./img/formulaire_inscription.png)
+]
+
+---
+
+class: center, middle
+
+### Au moment de vous inscrire, n'oubliez pas de sélectioner "CESI"
+
+
+
+![](./img/selfdatalr_qrcode.png)
+
+.right[
+#### *Contact : [Sylvain Lapoix](mailto:sylvain@datactivist.coop)*
+]
