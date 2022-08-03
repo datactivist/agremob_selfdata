@@ -1,0 +1,507 @@
+---
+title: "Le chemin caché de vos données de mobilité"
+subtitle: "1/3 : un mouchard de poche"
+author: "Sylvain Lapoix (Datactivist<br>pour la CdA La Rochelle)"
+date: "28/07/2022"
+output:
+  SlidesDatactivist::moon_reader:
+    css:
+      - default
+      - datactivist
+      - datactivist-fonts
+      - https://raw.githubusercontent.com/SylvainLapoix/slides_datactivist/master/bonus_styles.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      highlightSpans: true
+      countIncrementalSlides: false
+params:
+  event: Webinaire - données mobilités - 1/3
+
+---
+
+layout: true
+  
+
+`r paste0("<div class='my-footer'><span>", params$event, "</span> <center><div class=logo><img src='../webinaire_mobilites_complet/img/selfdata_footer_agremob_small.jpg' width='100'></center></span></div>")` 
+
+
+<style type="text/css">
+
+.lr_bg{
+  background: black;
+  color: #f7c600;
+  font-weight: bold;
+}
+
+.pull-left-wide {
+  width: 65%;
+  float: left;
+}
+
+.pull-right-wide {
+  width: 65%;
+  float: right;
+}
+
+.pull-right-narrow {
+  width: 30%;
+  float: right;
+}
+
+.pull-left-narrow {
+  width: 30%;
+  float: left;
+}
+
+.quote {
+  font-family: 'Rokkitt';
+  font-weight: bold;
+  font-style: italic;
+  font-size: 28px;
+}
+
+
+.yellow-h{
+  background: #ffff88;
+}
+
+.blue-h{
+  background: #83c7fc;
+}
+
+
+.white-h{
+   color: #000000;
+   background: #FFFFFF;
+}
+
+.black-h{
+   color: #FFFFFF;
+   background: #000000;
+}
+
+
+</style>
+
+---
+
+
+
+.center[
+
+**Ce webinaire est organisé par le programme self data territorial de la Communauté d'Agglomération de La Rochelle**
+
+![](../webinaire_mobilites_complet/img/selfdata_bloc_financeurs.png)
+
+]
+
+
+---
+
+background-image: url("https://media.giphy.com/media/zBcAGK8LqMXSCAZS1A/giphy.gif")
+background-size: contains
+class: inverse
+
+# Introduction<br>"Rien à cacher ..."
+
+---
+
+## Rétention des données d'appel
+.pull-left-wide[
+En 2008, l'Allemagne traduit en droit national la directive sur la conservation des données.
+
+Elle obligeait les opérateurs téléphoniques à conserver pendant six mois de nombreuses données détaillées sur les activités des usager·ères : numéro d'appel entrant et sortant, durée des appels, adresses IP ... .red[**et localisation des téléphones**].
+
+Désireux de montrer le risque pour le simple citoyen, **le député fédéral écologiste Malte Spitz** (ci-contre) demande à son opérateur Deutsch Telekom, six mois des données visées par la nouvelle loi.
+]
+
+.pull-right-narrow[
+![](../webinaire_mobilites_complet/img/malte_spitz.jpg)
+]
+
+---
+
+background-image: url("https://media.giphy.com/media/yTVqsXTWQRewFBJgCD/giphy.gif")
+class: inversen, center
+
+## Aucun risque, n'est-ce pas ?
+
+---
+
+### Alors en fait ...
+
+![](../webinaire_mobilites_complet/img/tell_all_telephone.png)
+
+.footnote[
+Source : Die Zeit, 2010, [sur YouTube](https://www.youtube.com/watch?v=25Smp8_g9u0), [l'article original](https://www.zeit.de/datenschutz/malte-spitz-data-retention) n'est plus disponible.
+]
+
+---
+
+### Et je voudrais pas vous inquiéter mais ...
+
+--
+
+![](../webinaire_mobilites_complet/img/tell_all_telephone_2009.png)
+
+
+
+---
+
+### Ce webinaire propose de répondre à trois séries de questions
+
+* aujourd'hui **jeudi 28 juillet**, pour ce premier volet .red[*Un mouchard de poche*] :
+  * Comment mon téléphone sait où je suis (et ma voiture aussi) ?
+  * Comment ces données sont-elles partagées ?
+  
+  
+* **jeudi 4 août**, 2è volet .red[*Le GPS business*] :
+  * Comment ces données sont-elles analysées ?
+  * Par qui ?
+  * A quelles fins ?
+  * Comment sont-elles revendues ?
+  
+  
+* **jeudi 25 août**, 3è et dernier volet  .red[*Vers la liberté de mouvement*] : 
+  * Comment limiter la propagation de ses données de mobilité ?
+  * Quels autres systèmes adopter pour mieux maîtriser ses données ?
+
+---
+
+
+background-image: url("https://media.giphy.com/media/W7KGFCXzNfQTNYEgL7/giphy.gif")
+class: inverse
+
+# 1. Téléphone et voiture,<br>outils de géoloc massive
+
+---
+
+### Votre téléphone a "besoin" de savoir où vous êtes
+
+.center[
+![](../webinaire_mobilites_complet/img/telephone_fonctionnement.jpeg)
+]
+
+.footnote[
+.black-h[Source : [Le Petit Quotidien](https://lepetitquotidien.playbacpresse.fr/exposes-detail/lepq/comment-fonctionne-un-telephone-portable-1)]
+]
+
+---
+
+### Méthode 1 : Le bornage
+
+.center[
+.reduite[
+![](../webinaire_mobilites_complet/img/cell_phone_location.webp)
+]
+]
+
+.footnote[
+Source illustration : [Irislab](https://www.irislab.com/fr/blogs/matthews-blog/triangulation).
+]
+
+
+
+---
+
+### Méthode 2 : le GPS
+
+.pull-left[
+**1. Un réseau**
+
+* émetteur : 30 satellites à 20000 km d'altitude ;
+* récepteur : des capteurs GPS.
+
+
+**2. Un signal**
+Des "pulse" contenant 3 données :
+
+* nom du satellite ;
+* heure de départ ;
+* position.
+]
+
+.pull-right[
+**3. Un calcul**
+
+distance = (heure d'arrivé - heure de départ) * C
+
+C : vitesse de la lumière
+
+**4. Une triangulation**
+
+La distance de trois pulse suffit à situer n'importe quel point en 3D.
+
+**5. Trois coordonnées**
+X ; Y ; Z.
+]
+
+---
+
+### Spoiler : votre voiture aussi
+
+.center[
+![](../webinaire_mobilites_complet/img/computer_on_wheels.png)
+]
+
+.footnote[Source : [Los Angeles Times, 19 mars 2015](https://www.latimes.com/business/autos/la-fi-hy-musk-computer-on-wheels-20150319-story.html)]
+
+---
+
+### Ce que votre Tesla raconte à Elon Musk
+
+.center[
+![](../webinaire_mobilites_complet/img/tweet_tesla_data.png)
+]
+
+Source : [Twitter](https://twitter.com/arctechinc/status/1319797485712203776).
+
+.footnote[1Go ≈ 3h20 de vidéo ou 17 heures de son en streaming (selon la résolution)]
+
+---
+
+### Et même si vous n'avez pas de Tesla ...
+
+![](../webinaire_mobilites_complet/img/vehicules_connecte_cnil.png)
+
+Extrait du rapport de la Cnil sur le "[pack de conformité véhicules connectés](https://www.cnil.fr/fr/vehicules-connectes-un-pack-de-conformite-pour-une-utilisation-responsable-des-donnees)".
+
+
+---
+
+
+background-image: url("https://media.giphy.com/media/cGEASD6uhbOPyF5FQ5/giphy.gif")
+class: inverse
+
+# 2. Un mouchard de poche
+
+---
+
+background-image: url("https://media.giphy.com/media/j27AFdZgwiiBrO8tvK/giphy.gif")
+class: inverse
+
+## Données localisation d'appel
+
+---
+
+### "Mouchard de poche"
+
+![](../webinaire_mobilites_complet/img/mouchard_de_poche.png)
+
+.footnote[
+.black-h[Source : [Le Monde](https://www.lemonde.fr/a-la-une/article/2011/07/15/la-puce-de-telephone-mouchard-de-poche_1549070_3208.html).]
+]
+
+---
+
+### Cas d'usage : les données Covid
+
+.center[
+![](../webinaire_mobilites_complet/img/confinement_telephone.png)
+]
+
+.footnote[
+.black-h[
+Source : [Les Echos](https://www.lesechos.fr/tech-medias/hightech/coronavirus-la-geolocalisation-des-telephones-confirme-lexode-de-parisiens-1189565).]
+]
+---
+
+### L'outil Flux Vision d'Orange
+
+.center[
+![](../webinaire_mobilites_complet/img/orange_flux_vision.png)
+]
+
+.footnote[Source : [Acteurs publics](https://acteurspublics.fr/webtv/emissions/acteurs-publics-solutions/flux-vision-la-modelisation-des-deplacements-de-population-pendant-la-crise).]
+
+
+---
+
+### Cas d'usage : géolocalisation via SMS
+
+.center[
+![](../webinaire_mobilites_complet/img/sms_geoloc_mobile.png)
+]
+
+.footnote[
+.black-h[
+Source : [SDIS06](https://www.sdis06.fr/jcms/psdis_15393/cta-/-codis-mise-en-service-de-l-application-geoloc-18-112).
+]
+]
+---
+
+background-image: url("https://media.giphy.com/media/6bh9FTTEKdtZe/giphy.gif")
+class: inverse
+
+## Données GPS
+
+---
+
+### A qui votre téléphone partage votre localisation ?
+
+.pull-left[**Android**
+
+.reduite[
+![](../webinaire_mobilites_complet/img/autorisation_android.png)
+]
+]
+
+.pull-right[**iOS**
+
+.reduite[
+![](../webinaire_mobilites_complet/img/autorisation_ios.png)
+]
+]
+
+---
+
+### Exercice pratique : qui se fait le plus tracker ?
+
+Sous Android : `Paramètres > Confidentialité > Gestionnaire d'autorisations > Localisation`
+
+Sous iOS : `Réglages > Confidentialité > Service de localisation`
+
+---
+
+### Régimes de partage
+
+
+.pull-left[**Android**
+![](../webinaire_mobilites_complet/img/autorisation_android.png)
+]
+
+.pull-right[Quatre cas sont évoqués :
+
+* en permanence (arrière-plan) ;
+* en usage ;
+* à la demande ;
+* jamais.
+
+Mais le détail de à qui et pour quoi sont transférées les données n'est pas fourni.
+]
+
+---
+
+
+background-image: url("https://media.giphy.com/media/9ryK98PxAGLxifr9aD/giphy.gif")
+background-size: contains
+class: inverse
+
+
+### De quelle droit ces données sont-elles collectées ?
+
+---
+
+
+background-image: url("../webinaire_mobilites_complet/img/waze_cgu.png")
+background-size: contain
+
+### .white-h[Parce que vous avez donné votre accord aux CGU*]
+
+.footnote[
+.white-h[\*Conditions générales d'utilisation.]
+]
+
+
+---
+
+background-image: url("https://www.visualcapitalist.com/wp-content/uploads/2020/04/length-of-service-agreements-1.jpg")
+background-size: cover
+
+
+### .white-h[Et, vous les avez lues avant ?*]
+
+.footnote[
+.black-h[
+Source image : [Visual Capitalist](https://www.visualcapitalist.com/terms-of-service-visualizing-the-length-of-internet-agreements/)]
+]
+]
+
+
+---
+
+background-image: url("https://media.giphy.com/media/yMwWgfNqIO8Kc/giphy.gif")
+background-size: cover
+class: inverse, center
+
+## Bienvenue dans le monde merveilleux de la gouvernance des données
+
+---
+
+
+### Le RGPD : un début de cadre
+
+.center[
+.reduite[
+![](https://www.cnil.fr/sites/default/files/styles/contenu-generique-visuel/public/thumbnails/image/notion_cles_0.jpg?itok=CJyE3vkK)
+]
+]
+
+Adopté par le Parlement européen en 2016 et porté en droit français en 2018, le Règlement général sur la protection des données (ou RGPD) encadre la collecte, le traitement, l'utilisation et la conservation des données dans l'Union européenne.
+
+Source illustration : [Cnil](https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on).
+
+---
+
+
+background-image: url("https://media.giphy.com/media/qPkOReBnmmETgX5RMs/giphy.gif")
+background-size: cover
+
+### Le droit à la portabilité,<br>progrès concret
+
+---
+
+
+background-image: url("https://media.giphy.com/media/VXCPgZwEP7f1e/giphy-downsized-large.gif")
+background-size: contains
+class: inverse, center
+
+### .black-h[Et, vous allez l'utiliser ?]
+
+--
+
+### .black-h[Comme beaucoup de gens : non.]
+
+--
+
+.footnote[
+.black-h[... et on peut pas vous en vouloir.]
+]
+
+
+---
+
+background-image: url("https://media.giphy.com/media/8FJjDVGHSOk7PExGeu/giphy.gif")
+background-size: contains
+class: inverse, center
+
+
+### ... mais d'autres ne s'en privent pas !
+
+---
+
+class: inverse, center
+
+
+
+## Prochain épisode : comment sont utilisées vos données ?
+
+![](https://media.giphy.com/media/j1RdWetLBJQIdP8TnK/giphy.gif)
+
+### Rendez-vous jeudi 4 août à 13h30
+
+---
+
+
+background-size: contains
+class: inverse, center
+
+### Envie de participer à un projet citoyen respectueux de vos données ?
+
+![](../webinaire_mobilites_complet/img/selfdatalr_qrcode.png)
+
+**Rejoignez l'expérimentation self data territorial menée par la Communauté d'Agglomération de La Rochelle et Agremob !**
+
+.footnote[*Pour plus d'info, envoyez un mail à [larochelle@selfdata.org](mailto:larochelle@selfdata.org)*]
