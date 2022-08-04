@@ -124,7 +124,7 @@ Votre consentement est recueilli par l'acceptation des **Conditions générales 
 * traitement ;
 * utilisation.
 
-Waze vous propose sa version de l'itinéraire, selon ses critères (principalement durée du trajet et péages)]
+Waze vous propose sa version de l'itinéraire, selon ses critères (principalement durée du trajet et péages).]
 
 ---
 

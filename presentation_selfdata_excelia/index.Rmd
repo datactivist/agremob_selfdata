@@ -2,7 +2,7 @@
 title: "Self data territorial<br>La Rochelle"
 subtitle: "relier carbone et mobilités par le numérique"
 author: "Sylvain Lapoix (Datactivist)<br>co-chef de projet self data La Rochelle"
-date: "15/03/2022"
+date: "07/04/2022"
 output:
   SlidesDatactivist::moon_reader:
     css:
@@ -87,7 +87,6 @@ layout: true
 
 
 ---
----
 
 background-image: url("https://media.giphy.com/media/HVFJvupn4gYMjfCwPW/giphy.gif")
 background-size: contains
@@ -146,7 +145,6 @@ class: inverse, center
 
 ### En fait, elles marchent presque pareil ...
 
-
 ---
 
 #### Capter les données GPS 1/2
@@ -155,7 +153,6 @@ Dès qu'un mouvement est capté par .red[l'accéléromètre], l'app débute la c
 
 .center[
 ![](https://media.giphy.com/media/WG17Ng2VWX4OGhJO6v/giphy.gif)
-]
 
 ---
 

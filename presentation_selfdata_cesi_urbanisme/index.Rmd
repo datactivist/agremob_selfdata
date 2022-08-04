@@ -1,8 +1,8 @@
 ---
 title: "Self data territorial<br>La Rochelle"
-subtitle: "un outil pour relier carbone et mobilités par la donnée"
+subtitle: "relier carbone et mobilités par le numérique"
 author: "Sylvain Lapoix (Datactivist)<br>co-chef de projet self data La Rochelle"
-date: "16/02/2022"
+date: "15/03/2022"
 output:
   SlidesDatactivist::moon_reader:
     css:
@@ -17,7 +17,7 @@ output:
       highlightSpans: true
       countIncrementalSlides: false
 params:
-  event: Self data LR - présentation CESI urbanisme
+  event: Self data LR - présentation Excelia marketing digital
 
 ---
 
@@ -87,13 +87,14 @@ layout: true
 
 
 ---
+---
 
 background-image: url("https://media.giphy.com/media/HVFJvupn4gYMjfCwPW/giphy.gif")
 background-size: contains
 class: inverse
 
 
-# I. Le chemin caché de vos données de mobilité
+# I. Comment et pourquoi vos apps vous trackent ?
 
 ---
 
@@ -104,9 +105,108 @@ class: inverse, center
 
 ### Qui parmi vous utilise Waze ?
 
+
+---
+
+background-image: url("https://media.giphy.com/media/EaMTsoYxfPpuw/giphy.gif")
+background-size: contains
+class: inverse, center
+
+
+### Qui parmi vous utilise Strava ?
+
+
+---
+
+background-image: url("https://media.giphy.com/media/i44JJHlvLsbIjY7uJ4/giphy.gif")
+background-size: contains
+class: inverse, center
+
+
+### Qui parmi vous utilise Géovélo ?
+
+
+---
+
+background-image: url("https://media.giphy.com/media/wa8uMtV7bmdGTGGmD7/giphy.gif")
+background-size: cover
+class: inverse, center
+
+
+### Savez-vous quelles données elles récupèrent ?
+
+
+
+---
+
+background-image: url("https://media.giphy.com/media/1wANL9kM16LyszJjms/giphy.gif")
+background-size: contains
+class: inverse, center
+
+
+### En fait, elles marchent presque pareil ...
+
+
+---
+
+#### Capter les données GPS 1/2
+
+Dès qu'un mouvement est capté par .red[l'accéléromètre], l'app débute la collecte des données issues du .red[GPS] (elle se branche aussi sur d'autres capteurs pour être plus précise : WiFi, Bluetooth, 4G ou 5G).
+
+.center[
+![](https://media.giphy.com/media/WG17Ng2VWX4OGhJO6v/giphy.gif)
+]
+
+---
+
+#### Capter les données GPS 2/2
+
+
+Quand .red[l'accéléromètre] note un arrêt prolongé du mouvement, l'app cesse la collecte de données du capteur .red[GPS].
+
+.center[
+![](https://media.giphy.com/media/ezCLFd32cEXn2/giphy.gif)
+]
+
+---
+
+
+background-image: url("https://media.giphy.com/media/bcrOR2stk6tKIxqPOZ/giphy.gif")
+background-size: contains
+class: inverse, center
+
+### Mais alors, quelles sont les différences ?
+
+---
+
+### 1. La façon dont la donnée est restituée à l'usager
+
+Quels sont les *"priorités"* des apps ?
+
+.pull-left[
+* .red[Waze] cherche **l'efficacité** ;
+* .red[Strava] cherche **la performance** ;
+* .red[Géovélo] cherche **l'efficacité** et **la sécurité**.
+]
+
 --
 
-### Qui sait à quoi sert ses données ?
+.pull-right[
+> Et quelles dimensions ne sont pas envisagées ?
+
+]
+
+--
+
+Par exemple : le coût ou la dangerosité du trajet, la beauté des paysages, la fatigue du sportif ...
+
+---
+
+background-image: url("")
+background-size: contains
+class: inverse, center
+
+### 2. A qui d'autre que l'usager sont transmises les données
 
 
 ---
@@ -359,64 +459,6 @@ Intégralement open source (son code est dispo sur Github), cette application vi
 ![](./img/emission_interface.png)
 ]
 
----
-
-
-
-background-image: url("https://media.giphy.com/media/xT1R9XWlRXt08xfDX2/giphy.gif")
-background-size: contains
-class: inverse
-
-
-### Comment ça marche ?
-
----
-
-#### e-mission se lance 1/4
-
-.center[
-![](https://media.giphy.com/media/LYXJQHXO65oe4/giphy.gif)
-]
-
-L'application se branche sur plusieurs composants du téléphone :
-* GPS ;
-* capteur de réseau (téléphonie et WiFi) ;
-* accéléromètre.
-
-Elle fonctionne **en arrière-plan**, c'est-à-dire sans avoir besoin d'être activée (comme Strava ou Waze). Elle reste en veille, prête à se déclencher dès que .red[l'accéléromètre] repère un mouvement du device.
-
----
-
-#### e-mission en action 2/4
-
-Dès qu'un mouvement est capté par .red[l'accéléromètre], eMission débute la collecte des données issues du .red[GPS].
-
-.center[
-![](https://media.giphy.com/media/WG17Ng2VWX4OGhJO6v/giphy.gif)
-]
-
----
-
-#### e-mission en action 3/4
-
-Quand .red[l'accéléromètre] note un arrêt prolongé du mouvement, TraceMob cesse la collecte de données du capteur .red[GPS].
-
-.center[
-![](https://media.giphy.com/media/ezCLFd32cEXn2/giphy.gif)
-]
-
----
-
-#### e-mission en action 4/4
-
-La trace collectée va être analysée et confrontée à des algorithmes permettant de *"prédire"* le mode de déplacement utilisé en fonction de la physionomie de la trace :
-
-* vitesse et arrêt ;
-* point de passage (par exemple : si le véhicule s'arrête à des points identifiés comme arrêt de bus sur OpenStreetMap, la trace sera identifiée comme un déplacement en bus).
-
-.center[
-![](https://media.giphy.com/media/NuH9WJmVejlboN0uB7/giphy.gif)
-]
 
 ---
 
@@ -585,8 +627,8 @@ Ces données seront traitées et analysées dans le cadre de publications scient
 ---
 
 
-background-image: url("https://media.giphy.com/media/3omJYYjXQN3C6eUTfh/giphy.gif")
-background-size: cover
+background-image: url("./img/selfdatalr_qrcode.png")
+background-size: contains
 class: inverse
 
 
@@ -619,25 +661,8 @@ class: inverse
 
 ---
 
+class: center, middle, inverse
 
-## Comment s'inscrire ?
+### Merci pour votre attention !
 
-.white-h[Il vous suffit de remplir [un formulaire d'engagement](https://framaforms.org/experimentation-self-data-territorial-et-mobilites-durables-inscription-1613560399)]
-
-.center[
-![](./img/formulaire_inscription.png)
-]
-
----
-
-class: center, middle
-
-### Au moment de vous inscrire, n'oubliez pas de sélectioner "CESI"
-
-
-
-![](./img/selfdatalr_qrcode.png)
-
-.right[
 #### *Contact : [Sylvain Lapoix](mailto:sylvain@datactivist.coop)*
-]
