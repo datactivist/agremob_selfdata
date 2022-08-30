@@ -1,0 +1,420 @@
+---
+title: "Webinaire Agremob"
+subtitle: "3/3 : vers la liberté de mouvement"
+author: "Sylvain Lapoix (Datactivist<br>pour la CdA La Rochelle)"
+date: "25/08/2022"
+output:
+  SlidesDatactivist::moon_reader:
+    css:
+      - default
+      - datactivist
+      - datactivist-fonts
+      - https://raw.githubusercontent.com/SylvainLapoix/slides_datactivist/master/bonus_styles.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      highlightSpans: true
+      countIncrementalSlides: false
+params:
+  event: Webinaire - données mobilités
+
+---
+
+layout: true
+  
+
+`r paste0("<div class='my-footer'><span>", params$event, "</span> <center><div class=logo><img src='../webinaire_mobilites_complet/img/selfdata_footer_agremob_small.jpg' width='100'></center></span></div>")` 
+
+
+<style type="text/css">
+
+.lr_bg{
+  background: black;
+  color: #f7c600;
+  font-weight: bold;
+}
+
+.pull-left-wide {
+  width: 65%;
+  float: left;
+}
+
+.pull-right-wide {
+  width: 65%;
+  float: right;
+}
+
+.pull-right-narrow {
+  width: 30%;
+  float: right;
+}
+
+.pull-left-narrow {
+  width: 30%;
+  float: left;
+}
+
+.quote {
+  font-family: 'Rokkitt';
+  font-weight: bold;
+  font-style: italic;
+  font-size: 28px;
+}
+
+
+.yellow-h{
+  background: #ffff88;
+}
+
+.blue-h{
+  background: #83c7fc;
+}
+
+
+.white-h{
+   color: #000000;
+   background: #FFFFFF;
+}
+
+.black-h{
+   color: #FFFFFF;
+   background: #000000;
+}
+
+
+</style>
+
+
+---
+
+.center[
+
+**Ce webinaire est organisé par le programme self data territorial de la Communauté d'Agglomération de La Rochelle**
+
+![](../webinaire_mobilites_complet/img/selfdata_bloc_financeurs.png)
+
+]
+
+
+---
+
+background-image: url("https://media.giphy.com/media/lfGKdK1yKPja/giphy.gif")
+class: inverse, center
+
+# Comment reprendre le contrôle ?
+
+---
+
+### Rappel : qui a accès à votre géoloc ?
+
+.pull-left[Sous Android : `Paramètres > Confidentialité > Gestionnaire d'autorisations > Localisation`
+
+.reduite[
+![](../webinaire_mobilites_complet/img/autorisation_android.png)
+]
+]
+
+.pull-right[Sous iOS : `Réglages > Confidentialité > Service de localisation`
+
+
+.reduite[
+![](../webinaire_mobilites_complet/img/autorisation_ios.png)
+]
+]
+
+---
+
+
+
+### C'est l'heure de la détox ...
+
+---
+
+### Un plan en trois étapes pour régler ça
+
+.center[
+![](https://media.giphy.com/media/lxcz7ntpCKJfq/giphy.gif)
+]
+
+--
+
+1. désinstaller ;
+2. paramétrer ;
+3. remplacer.
+
+---
+
+
+background-image: url("https://media.giphy.com/media/cnQhZ7SqhLBPFRGZgN/giphy.gif")
+class: inverse, center
+
+# Etape 1 : désinstaller
+
+---
+
+### La plupart des apps que nous utilisons ne sont que des versions de sites web
+
+.center[
+![](../webinaire_mobilites_complet/img/classement_apps_france.png)
+
+Extrait du classement [SensorTower](https://app.sensortower.com/android/rankings/top/mobile/france/overall?iap=all&watch_enabled&rankings_type=free&min_cost=0&max_cost&date=2022-08-25&show_store_data=true) (Android, France).
+]
+
+Êtes-vous sûr·e d'avoir besoin de ces apps **sur votre smartphone** ?
+
+---
+
+background-image: url("https://media.giphy.com/media/YV3pwyhqG5Ulsrb0oT/giphy.gif")
+class: inverse, center
+
+### Jetez donc un oeil ...
+
+---
+
+background-image: url("https://media.giphy.com/media/d3mlE7uhX8KFgEmY/giphy.gif")
+class: inverse, center
+
+### Nécessité
+
+Si vous n'avez pas besoin d'avoir ces apps sur votre téléphone, vous pouvez les désinstaller et ainsi limiter les dispersions de vos données de géolocalisation.
+
+---
+
+### Besoin d'aide pour arbitrer ?
+
+.pull-left-wide[
+Si vous avez du mal à vous résoudre à les désinstaller, utilisez un autre critère :
+
+* par exemple, **la mémoire que ces apps occupentùù sur votre téléphone (cf. capture d'écran ci-contre, accessible dans les paramètres de votre téléphone) ;
+* **les apps que vous n'utilisez jamais** (que vous trouverez dans les fonctionnalités "bien être") ;
+* au contraire, **les apps que vous utilisez TROP** ;
+* **les apps qui consomment le plus de forfait Internet** (disponible dans la catégorie "Réseau" de vos paramètres) ;
+* etc.
+]
+
+.pull-right-narrow[
+![](../webinaire_mobilites_complet/img/apps_memoire.png)
+
+]
+
+
+---
+
+background-image: url("https://media.giphy.com/media/Kx7Ramdh3yRmGlIt0W/giphy.gif")
+class: inverse, center
+
+### Si vous pensez en avoir besoin, essayons de limiter les fuites ...
+
+---
+
+background-image: url("https://media.giphy.com/media/3o6Mbsras7qdAwgABW/giphy.gif")
+class: inverse, center
+
+# Etape 2 : Paramétrer
+
+---
+
+
+background-image: url("https://media.giphy.com/media/p9G0FYn3Wr1Tjz7VbL/giphy.gif")
+class: center
+
+## Paramétrer vos apps
+
+---
+
+### Rappel : vous avez la main sur vos régimes de partage !
+
+
+.pull-left[
+![](../webinaire_mobilites_complet/img/autorisation_android.png)
+]
+
+.pull-right[
+L'interface qui récapitule les applications auxquelles sont partagées votre géolocalisation n'est pas qu'une interface de consultationt : elle permet aussi de **modifier à tout moment les autorisations données** (que ça soit en les supprimer ou en réglant le régime de partage).
+]
+
+---
+
+### Régler app par app
+
+.center[
+![](https://media.giphy.com/media/l3q2NXRSaKlqWtSH6/giphy.gif)
+]
+
+Vos mobile comportent tous une catégorie "applications" avec une fiche listant les autorisations. **Vous pouvez donc avoir un partage de données à la carte pour chaque app**.
+
+---
+
+background-image: url("https://media.giphy.com/media/xT5LMwl3LPxUWlcoLe/giphy.gif")
+class: center
+
+## Paramétrer vos services
+
+---
+
+### Exemple : Google account
+
+Si vous disposez d'un compte Google, certains réglages s'appliquent à tous les services dont vous disposez (y compris Google search, Android, Gmail, etc.).
+
+Les paramètres sont récapitulés dans [une page dédiée](https://myaccount.google.com/data-and-privacy) :
+
+![](../webinaire_mobilites_complet/img/google_account_privacy.png)
+
+---
+
+### Guide de réglage
+
+
+Google vous propose [une documentation complète](https://guidebooks.google.com/android/changesettingspermissions/manageyourgoogleaccountsettings?utm_campaign=HC_3118621_Aug21&hl=en-US) (hélas non dispo en français) pour comprendre comment modifier vos paramètres vous-mêmes.
+
+
+.center[
+![](../webinaire_mobilites_complet/img/google_account_settings.png)
+]
+
+---
+
+
+background-image: url("https://media.giphy.com/media/StQAQt5yti4QhIJ7y5/giphy.gif")
+class: inverse, center
+
+### Si vous n'avez pas assez de contrôle sur l'app, peut-être existe-t-il des alternatives ...
+
+
+---
+
+background-image: url("https://media.giphy.com/media/d1E0PT843S3n3Phu/giphy.gif")
+class: inverse, center
+
+# Etape 3 : changer
+
+---
+
+### Trouver des équivalents respectueux de vos apps
+
+Il existe des équivalent respectueux de votre vie privée pour tout.
+
+.pull-left[
+![](../webinaire_mobilites_complet/img/opentrack.png)
+]
+
+.pull-right[Par exemple pour les apps de sport, [OpenTracks](https://f-droid.org/en/packages/de.dennisguse.opentracks/), [RunnerUp](https://f-droid.org/en/packages/org.runnerup.free/) ou [FitoTrack](https://f-droid.org/en/packages/de.tadris.fitness/) vous permettrons de suivre vos performances sans voir vos données partagées de manière discrétionnaire.]
+
+---
+
+### Intégrer des écosystèmes vertueux
+
+.pull-left-narrow[
+
+[OpenStreetMap](https://www.openstreetmap.org/) constitue la référence des ressources géographiques ouvertes, contributives et libres.
+
+Sur cette base, de nombreux projets ont été construit dans le soucis de respecter la vie privée et les données des usagers et usagères, comme Organic Maps (alterantive à Google Maps et à MapsMe).
+
+]
+
+
+.pull-right-wide[
+.center[
+![](../webinaire_mobilites_complet/img/organicmaps.png)
+]
+]
+
+---
+
+### Le self data !
+
+> .quote["la production, l’exploitation et le partage de données personnelles par les individus, sous leur contrôle et à leurs propres fins"]
+
+Deux dimensions se croisent dans cette définition :
+
+.pull-left[#### *Les opérations*
+
+* la production ;
+* l'exploitation ;
+* le partage]
+
+.pull-right[#### *Leurs modalités*
+
+* sous le contrôle des individus ;
+* à leur propre fin.]
+
+Leur objet central, **les données personnelles**, justifie les modalités évoquées :<br>il s'agit de réinvestir les usager·ères dans les data produites à leur sujet.
+
+.right[
+.caption[Source : [Kit Self Data Territorial](http://mesinfos.fing.org/implementer-le-self-data-sur-son-territoire-suivez-le-guide/), MesInfos / Fing]
+]
+
+---
+
+## La démarche de La Rochelle : mobilité, données, privacy
+
+Le self data territorial de .lr_bg[la Communuauté d'Agglomération de La Rochelle] s'inscrit dans la continuité de deux grands projets territoriaux :
+
+* La Rochelle Territoire Zéro Carbone ;
+* Agremob.
+
+.pull-left[
+.center[
+**Objectif**
+
+*expérimenter avec un groupe de 500 bêtatesteurs et bêtatesteuses des outils de réappropriation des données et collecter des données scientifiques afin d'étudier les changements de comportement permis par l'information sur l'impact carbone des mobilités.*]
+]
+
+.pull-left[
+.center[
+**Partenaires**
+
+* .red[**recruteurs**] : CdA La Rochelle, ville de La Rochelle, Université de La Rochelle, Excelia, Eigsi, J'adopte un projet ;
+* .red[**scientifiques**] : Cnam, Excelia, Université de La Rochelle ;
+* .red[**techniques**] : La Fabrique des mobilités, Cozy.
+]
+]
+
+---
+
+background-image: url("../webinaire_mobilites_complet/img/selfdatalr_qrcode.png")
+background-size: contains
+class: inverse, center
+
+
+### Un projet auquel VOUS pouvez participer !
+
+---
+
+background-image: url("https://media.giphy.com/media/M960XBOtpI9nozI13V/giphy.gif")
+background-size: cover
+class: inverse
+
+
+## En résumé, ce qu'on vous propose
+
+.footnote[]
+
+---
+
+background-image: url("https://media.giphy.com/media/baPIkfAo0Iv5K/giphy.gif")
+background-size: cover
+class: inverse
+
+## Et ce qu'on vous demande
+
+.footnote[
+.white-h[* télécharger et utiliser les apps ;
+* répondre à 3 questionnaires sur l'année ;
+* ... et puis c'est tout en fait !]
+]
+
+---
+
+
+background-size: contains
+class: inverse, center
+
+### Envie de participer à un projet citoyen respectueux de vos données ?
+
+![](../webinaire_mobilites_complet/img/selfdatalr_qrcode.png)
+
+**Rejoignez l'expérimentation self data territorial menée par la Communauté d'Agglomération de La Rochelle et Agremob !**
+
+.footnote[*Pour plus d'info, envoyez un mail à [larochelle@selfdata.org](mailto:larochelle@selfdata.org)*]

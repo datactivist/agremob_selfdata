@@ -108,7 +108,8 @@ class: inverse
 
 ---
 
-## Rétention des données d'appel
+### "Rétention des données d'appel"
+
 .pull-left-wide[
 En 2008, l'Allemagne traduit en droit national la directive sur la conservation des données.
 
@@ -140,7 +141,7 @@ Source : Die Zeit, 2010, [sur YouTube](https://www.youtube.com/watch?v=25Smp8_g9
 
 ---
 
-### Et je voudrais pas vous inquiéter mais ...
+### Ke voudrais pas vous inquiéter mais ...
 
 --
 
@@ -401,7 +402,7 @@ background-size: contain
 ### .white-h[Parce que vous avez donné votre accord aux CGU*]
 
 .footnote[
-.white-h[\*Conditions générales d'utilisation.]
+.white-h[\*[Conditions générales d'utilisation](https://fr.wikipedia.org/wiki/Conditions_g%C3%A9n%C3%A9rales_d%27utilisation).]
 ]
 
 
@@ -439,9 +440,7 @@ class: inverse, center
 ]
 ]
 
-Adopté par le Parlement européen en 2016 et porté en droit français en 2018, le Règlement général sur la protection des données (ou RGPD) encadre la collecte, le traitement, l'utilisation et la conservation des données dans l'Union européenne.
-
-Source illustration : [Cnil](https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on).
+Adopté par le Parlement européen en 2016 et porté en droit français en 2018, le Règlement général sur la protection des données (ou RGPD) encadre la collecte, le traitement, l'utilisation et la conservation des données dans l'Union européenne (illustration : [Cnil](https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on)).
 
 ---
 
